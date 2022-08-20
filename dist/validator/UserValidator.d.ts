@@ -1,11 +1,11 @@
 export declare class UserValidators {
-    static signUp(): any[];
-    static verifyUser(): any[];
-    static updatePassword(): any[];
-    static resendverificationEmail(): any[];
-    static login(): any[];
-    static sendResetPasswordEmail(): any[];
-    static verifyResetPasswordToken(): any[];
-    static resetPassword(): any[];
-    static updateProfilePic(): any[];
+    static signUp(): import("express-validator").ValidationChain[];
+    static verifyUser(): import("express-validator").ValidationChain[];
+    static updatePassword(): import("express-validator").ValidationChain[];
+    static resendverificationEmail(): import("express-validator").ValidationChain[];
+    static login(): import("express-validator").ValidationChain[];
+    static sendResetPasswordEmail(): import("express-validator").ValidationChain[];
+    static verifyResetPasswordToken(): import("express-validator").ValidationChain[];
+    static resetPassword(): import("express-validator").ValidationChain[];
+    static updateProfilePic(): import("express-validator").ValidationChain[];
 }

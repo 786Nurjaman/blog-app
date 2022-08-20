@@ -1,7 +1,6 @@
-import * as Multer from 'multer';
 export declare class Utils {
     Max_Token_Time: number;
-    multer: Multer.Multer;
+    multer: any;
     static generateVerificationToken(size?: number): number;
     static encryptPassword(password: string): Promise<any>;
     static comparePassword(password: {

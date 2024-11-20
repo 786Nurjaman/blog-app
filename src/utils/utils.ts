@@ -1,5 +1,6 @@
 import * as Bcrypt from 'bcrypt';
 import * as Multer from 'multer';
+import * as dotenv from 'dotenv';
 
 const storageOptions = Multer.diskStorage({
     destination: function (req, file, cb) {
@@ -58,5 +59,8 @@ export class Utils {
         }))
     }
 
+    static dotenvConfigs() {
+        dotenv.config({ path: '.env' });
+    }
 
 }

@@ -6,6 +6,7 @@ import UserRouter from './routers/UserRouter';
 import PostRouter from './routers/PostRouter';
 import CommentRouter from './routers/CommentRouter';
 import { Jobs } from './jobs/jobs';
+import { Utils } from './utils/utils';
 
 
 export class Server {
@@ -17,9 +18,13 @@ export class Server {
         this.handleErrors();
     }
     setConfiguration() {
+        this.dotenvConfigs()
         this.connectMongodb();
         this.configureBodyParser();
         Jobs.runRequiredJobs();
+    }
+    dotenvConfigs() {
+        Utils.dotenvConfigs();
     }
     connectMongodb() {
         const dbUrl = getEnvironment().db_url;
